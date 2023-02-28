@@ -1,0 +1,54 @@
+General tips and patterns for solving problems:
+
+    If input array is sorted then
+    - Binary search
+    - Two pointers
+
+    If asked for all permutations/subsets then
+    - Backtracking
+
+    If given a tree then
+    - DFS
+    - BFS
+
+    If given a graph then
+    - DFS
+    - BFS
+
+    If given a linked list then
+    - Two pointers
+
+    If recursion is banned then
+    - Stack
+
+    If must solve in-place then
+    - Swap corresponding values
+    - Store one or more different values in the same pointer
+
+    If asked for maximum/minimum subarray/subset/options then
+    - Dynamic programming
+
+    If asked for top/least K items then
+    - Heap
+    - QuickSelect
+
+    If asked for common strings then
+    - Map
+    - Trie
+
+    Else
+    - Map/Set for O(1) time & O(n) space
+    - Sort input for O(nlogn) time and O(1) space
+
+
+
+Notes on using a hashmap to implement an LRU
+TL;DR: use a hashmap with a separate LinkedList for best performance
+
+    Implementing an efficient cache: A cache is a data structure that stores a mapping from keys to values, with a fixed maximum size. When the cache is full and a new key-value pair needs to be added, the least recently used (LRU) item is removed to make room.
+    
+    You can use a hash map to implement a cache, with the keys being the cache keys and the values being the cache values.
+    
+    To implement the LRU eviction policy, you can maintain a separate doubly-linked list of the keys in the order that they were last accessed, with the most recently accessed key at the front of the list.
+    
+    When a key is accessed, you can move it to the front of the list. When a new key is added to the cache, you can remove the least recently used key from the back of the list. This approach has a time complexity of O(1) for cache lookups and insertions.
